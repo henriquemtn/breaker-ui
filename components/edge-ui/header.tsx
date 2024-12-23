@@ -31,10 +31,11 @@ export function SiteHeader() {
 
     return (
         <header
-        className={cn(
-          "supports-backdrop-blur:bg-background/90 sticky top-0 z-40 w-full bg-background/40 border-b backdrop-blur-lg",
-        )}
-      >            <div className="container mx-auto px-4">
+            className={cn(
+                "supports-backdrop-blur:bg-background/90 sticky top-0 z-40 w-full bg-background/40 border-b backdrop-blur-lg",
+            )}
+        >
+            <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <motion.div
@@ -42,12 +43,12 @@ export function SiteHeader() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <a href="/" className="text-2xl font-bold">Edge UI</a>
+                        <a href="/" className="text-base font-bold">Edge UI 🚀</a>
                     </motion.div>
 
                     {/* Desktop Navigation */}
                     <motion.nav
-                        className="hidden md:flex space-x-4"
+                        className="hidden md:flex space-x-8"
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
@@ -81,6 +82,23 @@ export function SiteHeader() {
                             <Search className="h-5 w-5" />
                             <span className="sr-only">Search</span>
                         </Button>
+                        <Link
+                            href={siteConfig.links.discord}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <div
+                                className={cn(
+                                    buttonVariants({
+                                        variant: "ghost",
+                                    }),
+                                    "w-9 px-0",
+                                )}
+                            >
+                                <Icons.discord className="size-4 fill-current" />
+                                <span className="sr-only">discord</span>
+                            </div>
+                        </Link>
                         <Link
                             href={siteConfig.links.github}
                             target="_blank"

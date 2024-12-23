@@ -22,7 +22,7 @@ export function AnimatedHero() {
   }
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4">
+    <section className="h-full flex flex-col items-center justify-center px-4">
       {/* Banner */}
       <Badge />
 
